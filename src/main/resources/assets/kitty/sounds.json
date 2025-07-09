@@ -1,0 +1,42 @@
+{
+  "bye_justin_hi_justin": {
+    "sounds": [
+      {
+        "name": "kitty:records/bye_justin_hi_justin",
+        "stream": true
+      }
+    ]
+  },
+  "the_tale_of_toothless": {
+    "sounds": [
+      {
+        "name": "kitty:records/the_tale_of_toothless",
+        "stream": true
+      }
+    ]
+  },
+  "steve_lava_chicken": {
+    "sounds": [
+      {
+        "name": "kitty:records/steve_lava_chicken",
+        "stream": true
+      }
+    ]
+  },
+  "lava_tearsstep": {
+    "sounds": [
+      {
+        "name": "kitty:records/lava_tearsstep",
+        "stream": true
+      }
+    ]
+  },
+  "terrifying_tears": {
+    "sounds": [
+      {
+        "name": "kitty:records/terrifying_tears",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+	"schemaVersion": 1,
+	"id": "kitty",
+	"version": "1.0.0-1.21.7",
+	"name": "The BedrockSMP",
+	"description": "Kitty's Mod",
+	"authors": [
+		"ItsKittyYouTube, ItsMoonYouTube"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/bedrocksmp",
+		"sources": ""
+	},
+	"license": "All Rights Reserved/No License",
+	"icon": "pack_image/kitty_new.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.itskittyyoutube.kitty.KittysMod"
+		],
+		"fabric-datagen": [
+			"net.itskittyyoutube.kitty.KittysModDataGenerator"
+		],
+		"client": [
+			"net.itskittyyoutube.kitty.KittysModClient"
+		]
+	},
+	"mixins": [
+		"kitty.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*",
+		"modmenu": "*",
+		"voicechat": "*",
+		"sound_physics_remastered": "*",
+		"entity_model_features": "*",
+		"entity_texture_features": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"recommends": {
+		"modmenu": "*",
+		"voicechat": "*",
+		"sound_physics_remastered": "*",
+		"entity_model_features": "*",
+		"entity_texture_features": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.youtubekitty": "https://www.youtube.com/@ItsKittyYouTube",
+				"modmenu.youtubemoon": "https://www.youtube.com/@ItsMoonDogggYT",
+				"modmenu.youtubekittyandmoon": "https://www.youtube.com/@kittyandmoon",
+				"modmenu.miniverse": "https://discord.gg/geng92VaWv"
+			}
+		}
+	}
+}

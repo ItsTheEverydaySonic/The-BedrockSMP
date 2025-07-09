@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_sword",
+      "count": 1
+    },
+    "title": "Golden Sword",
+    "description": "Acquire a Golden Sword",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kitty:bedrocksmp/stone_sword",
+  "criteria": {
+    "goldsword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:golden_sword"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "goldsword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

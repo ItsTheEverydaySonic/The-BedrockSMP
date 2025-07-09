@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "minecraft:magenta_dye",
+    [
+      "kitty:planks_template"
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "kitty:magenta_planks"
+  }
+}
