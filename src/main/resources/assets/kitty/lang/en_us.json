@@ -37,6 +37,10 @@
   "block.kitty.white_trapdoor": "White Trapdoor",
   "block.kitty.white_button": "White Button",
   "block.kitty.white_pressure_plate": "White Pressure Plate",
+  "block.kitty.white_stairs": "White Stairs",
+  "block.kitty.white_slab": "White Slab",
+  "block.kitty.white_fence": "White Fence",
+  "block.kitty.white_fence_gate": "White Fence Gate",
 
   "itemgroup.kitty.music_disc_items": "Music Discs",
   "itemgroup.kitty.wood": "Wood"

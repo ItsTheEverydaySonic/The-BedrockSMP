@@ -72,23 +72,36 @@ public class ModBlocks {
                     .strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block DARK_OAK_DOOR_WITH_WINDOWS = registerBlock("dark_oak_door_with_windows",
-            properties -> new DoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
+            properties -> new DoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
                     .nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block DARK_OAK_TRAPDOOR_WITH_WINDOWS = registerBlock("dark_oak_trapdoor_with_windows",
-            properties -> new TrapdoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
+            properties -> new TrapdoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
                     .nonOpaque().allowsSpawning(Blocks::never).burnable()));
 
     public static final Block WHITE_DOOR = registerBlock("white_door",
-            properties -> new DoorBlock(BlockSetType.PALE_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
-                    .nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
+            properties -> new DoorBlock(BlockSetType.PALE_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.WOOD)));
     public static final Block WHITE_TRAPDOOR = registerBlock("white_trapdoor",
-            properties -> new TrapdoorBlock(BlockSetType.PALE_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
-                    .nonOpaque().allowsSpawning(Blocks::never).burnable()));
+            properties -> new TrapdoorBlock(BlockSetType.PALE_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F)
+                    .nonOpaque().allowsSpawning(Blocks::never).burnable().sounds(BlockSoundGroup.WOOD)));
 
     public static final Block WHITE_BUTTON = registerBlock("white_button",
-            properties -> new ButtonBlock(BlockSetType.PALE_OAK, 30, properties.strength(0.6F).noCollision()));
+            properties -> new ButtonBlock(BlockSetType.PALE_OAK, 30, properties.strength(0.6F)
+                    .noCollision().sounds(BlockSoundGroup.WOOD)));
     public static final Block WHITE_PRESSURE_PLATE = registerBlock("white_pressure_plate",
-            properties -> new PressurePlateBlock(BlockSetType.PALE_OAK, properties.strength(0.5F)));
+            properties -> new PressurePlateBlock(BlockSetType.PALE_OAK, properties.strength(0.5F)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block WHITE_STAIRS = registerBlock("white_stairs",
+            properties -> new StairsBlock(ModBlocks.WHITE_PLANKS.getDefaultState(),
+                    properties.strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
+    public static final Block WHITE_SLAB = registerBlock("white_slab",
+            properties -> new SlabBlock(properties.strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block WHITE_FENCE = registerBlock("white_fence",
+            properties -> new FenceBlock(properties.strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
+    public static final Block WHITE_FENCE_GATE = registerBlock("white_fence_gate",
+            properties -> new FenceGateBlock(WoodType.PALE_OAK, properties.strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
 
 
 
@@ -116,6 +129,10 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(PLANKS_TEMPLATE);
             entries.add(WHITE_PLANKS);
+            entries.add(WHITE_STAIRS);
+            entries.add(WHITE_SLAB);
+            entries.add(WHITE_FENCE);
+            entries.add(WHITE_FENCE_GATE);
             entries.add(WHITE_DOOR);
             entries.add(WHITE_TRAPDOOR);
             entries.add(WHITE_PRESSURE_PLATE);
