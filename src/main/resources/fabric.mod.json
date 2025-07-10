@@ -15,7 +15,7 @@
 		"homepage": "https://modrinth.com/mod/bedrocksmp",
 		"sources": "https://github.com/ItsTheEverydaySonic/The-BedrockSMP"
 	},
-	"license": "All Rights Reserved/No License",
+	"license": "CC0 1.0",
 	"icon": "pack_image/kitty_new.png",
 	"environment": "*",
 	"entrypoints": {
