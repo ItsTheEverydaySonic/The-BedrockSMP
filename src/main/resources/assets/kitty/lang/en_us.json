@@ -33,6 +33,10 @@
   "block.kitty.pink_planks": "Pink Planks",
   "block.kitty.dark_oak_door_with_windows": "Dark Oak Door With Windows",
   "block.kitty.dark_oak_trapdoor_with_windows": "Dark Oak Trapdoor With Windows",
+  "block.kitty.white_door": "White Door",
+  "block.kitty.white_trapdoor": "White Trapdoor",
+  "block.kitty.white_button": "White Button",
+  "block.kitty.white_pressure_plate": "White Pressure Plate",
 
   "itemgroup.kitty.music_disc_items": "Music Discs",
   "itemgroup.kitty.wood": "Wood"

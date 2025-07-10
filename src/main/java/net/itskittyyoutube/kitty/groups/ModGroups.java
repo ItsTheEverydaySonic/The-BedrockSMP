@@ -212,6 +212,10 @@ public class ModGroups {
                         entries.add(Items.WARPED_BUTTON);
                         entries.add(ModBlocks.PLANKS_TEMPLATE);
                         entries.add(ModBlocks.WHITE_PLANKS);
+                        entries.add(ModBlocks.WHITE_DOOR);
+                        entries.add(ModBlocks.WHITE_TRAPDOOR);
+                        entries.add(ModBlocks.WHITE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.WHITE_BUTTON);
                         entries.add(ModBlocks.LIGHT_GRAY_PLANKS);
                         entries.add(ModBlocks.GRAY_PLANKS);
                         entries.add(ModBlocks.BLACK_PLANKS);

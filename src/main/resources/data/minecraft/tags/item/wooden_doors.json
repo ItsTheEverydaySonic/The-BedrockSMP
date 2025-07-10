@@ -11,6 +11,8 @@
     "minecraft:warped_door",
     "minecraft:mangrove_door",
     "minecraft:bamboo_door",
-    "minecraft:cherry_door"
+    "minecraft:cherry_door",
+    "kitty:dark_oak_door_with_windows",
+    "kitty:white_door"
   ]
 }
