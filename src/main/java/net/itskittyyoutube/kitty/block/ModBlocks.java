@@ -71,9 +71,12 @@ public class ModBlocks {
             properties -> new Block(properties.instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
-    public static final Block DARK_OAK_DOOR_WITH_WINDOW = registerBlock("dark_oak_door_with_window",
+    public static final Block DARK_OAK_DOOR_WITH_WINDOWS = registerBlock("dark_oak_door_with_windows",
             properties -> new DoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
                     .nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DARK_OAK_TRAPDOOR_WITH_WINDOWS = registerBlock("dark_oak_trapdoor_with_windows",
+            properties -> new TrapdoorBlock(BlockSetType.DARK_OAK, properties.instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .nonOpaque().allowsSpawning(Blocks::never).burnable()));
 
 
 
@@ -116,7 +119,8 @@ public class ModBlocks {
             entries.add(PURPLE_PLANKS);
             entries.add(MAGENTA_PLANKS);
             entries.add(PINK_PLANKS);
-            entries.add(DARK_OAK_DOOR_WITH_WINDOW);
+            entries.add(DARK_OAK_DOOR_WITH_WINDOWS);
+            entries.add(DARK_OAK_TRAPDOOR_WITH_WINDOWS);
         });
     }
 }

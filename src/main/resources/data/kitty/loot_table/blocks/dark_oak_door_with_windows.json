@@ -13,18 +13,18 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "kitty:dark_oak_door_with_window",
+              "block": "kitty:dark_oak_door_with_windows",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"
               }
             }
           ],
-          "name": "kitty:dark_oak_door_with_window"
+          "name": "kitty:dark_oak_door_with_windows"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "kitty:blocks/dark_oak_door_with_window"
+  "random_sequence": "kitty:blocks/dark_oak_door_with_windows"
 }

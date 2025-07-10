@@ -31,7 +31,8 @@
   "block.kitty.purple_planks": "Purple Planks",
   "block.kitty.magenta_planks": "Magenta Planks",
   "block.kitty.pink_planks": "Pink Planks",
-  "block.kitty.dark_oak_door_with_window": "Dark Oak Door With A Window",
+  "block.kitty.dark_oak_door_with_windows": "Dark Oak Door With Windows",
+  "block.kitty.dark_oak_trapdoor_with_windows": "Dark Oak Trapdoor With Windows",
 
   "itemgroup.kitty.music_disc_items": "Music Discs",
   "itemgroup.kitty.wood": "Wood"

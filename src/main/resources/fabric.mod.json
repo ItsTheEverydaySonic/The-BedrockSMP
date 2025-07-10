@@ -5,11 +5,15 @@
 	"name": "The BedrockSMP",
 	"description": "Kitty's Mod",
 	"authors": [
-		"ItsKittyYouTube, ItsMoonYouTube"
+		"ItsKittyYouTube"
+	],
+	"contributors": [
+		"ItsMoonYouTube",
+		"ItsTheEverydayPapaYT"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/bedrocksmp",
-		"sources": ""
+		"sources": "https://github.com/ItsTheEverydaySonic/The-BedrockSMP"
 	},
 	"license": "All Rights Reserved/No License",
 	"icon": "pack_image/kitty_new.png",

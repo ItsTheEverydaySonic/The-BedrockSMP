@@ -126,8 +126,9 @@ public class ModGroups {
                         entries.add(Items.DARK_OAK_FENCE);
                         entries.add(Items.DARK_OAK_FENCE_GATE);
                         entries.add(Items.DARK_OAK_DOOR);
-                        entries.add(ModBlocks.DARK_OAK_DOOR_WITH_WINDOW);
+                        entries.add(ModBlocks.DARK_OAK_DOOR_WITH_WINDOWS);
                         entries.add(Items.DARK_OAK_TRAPDOOR);
+                        entries.add(ModBlocks.DARK_OAK_TRAPDOOR_WITH_WINDOWS);
                         entries.add(Items.DARK_OAK_PRESSURE_PLATE);
                         entries.add(Items.DARK_OAK_BUTTON);
                         entries.add(Items.MANGROVE_LOG);
