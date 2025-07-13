@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:stone",
+    "#": "#minecraft:stone_tool_materials",
     "I": "minecraft:iron_ingot"
   },
   "pattern": [

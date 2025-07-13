@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
 	"id": "kitty",
-	"version": "1.0.0-1.21.7",
-	"name": "The BedrockSMP",
+	"version": "1.0.4-1.21.7",
+	"name": "The-BedrockSMP",
 	"description": "Kitty's Mod",
 	"authors": [
 		"ItsKittyYouTube"
@@ -12,7 +12,7 @@
 		"ItsTheEverydayPapaYT"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/bedrocksmp",
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/bedrocksmp",
 		"sources": "https://github.com/ItsTheEverydaySonic/The-BedrockSMP"
 	},
 	"license": "CC0 1.0",
@@ -36,12 +36,7 @@
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.7",
 		"java": ">=21",
-		"fabric-api": "*",
-		"modmenu": "*",
-		"voicechat": "*",
-		"sound_physics_remastered": "*",
-		"entity_model_features": "*",
-		"entity_texture_features": "*"
+		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

@@ -1,0 +1,931 @@
+package net.itskittyyoutube.kitty.datagen;
+
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.itskittyyoutube.kitty.block.ModBlocks;
+import net.itskittyyoutube.kitty.item.ModItems;
+import net.minecraft.data.recipe.RecipeExporter;
+import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
+import java.util.concurrent.CompletableFuture;
+
+public class ModRecipeProvider extends FabricRecipeProvider {
+    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
+    }
+
+    @Override
+    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
+        return new RecipeGenerator(wrapperLookup, recipeExporter) {
+            @Override
+            public void generate() {
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLANKS_TEMPLATE, 4)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .input('#', Items.QUARTZ)
+                        .input('X', ItemTags.PLANKS)
+                        .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.QUARTZ))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.DARK_OAK_DOOR_WITH_WINDOWS, 3)
+                        .pattern("XX")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('X', Items.GLASS_PANE)
+                        .input('#', Items.DARK_OAK_PLANKS)
+                        .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.DARK_OAK_TRAPDOOR_WITH_WINDOWS, 2)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('X', Items.GLASS_PANE)
+                        .input('#', Items.DARK_OAK_PLANKS)
+                        .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.WHITE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.WHITE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GRAY_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GRAY_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLACK_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLACK_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BROWN_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BROWN_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.RED_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.RED_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ORANGE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ORANGE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.YELLOW_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.YELLOW_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIME_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIME_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GREEN_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GREEN_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.CYAN_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.CYAN_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLUE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLUE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PURPLE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PURPLE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PINK_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PINK_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.WHITE_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.WHITE_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GRAY_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GRAY_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLACK_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLACK_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BROWN_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BROWN_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.RED_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.RED_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ORANGE_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ORANGE_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.YELLOW_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.YELLOW_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIME_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIME_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GREEN_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GREEN_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.CYAN_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.CYAN_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLUE_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLUE_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PURPLE_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PURPLE_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PINK_FENCE, 3)
+                        .pattern("#X#")
+                        .pattern("#X#")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PINK_FENCE_GATE, 1)
+                        .pattern("X#X")
+                        .pattern("X#X")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .input('X', Items.STICK)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.WHITE_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GRAY_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLACK_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BROWN_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.RED_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.ORANGE_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.YELLOW_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIME_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.GREEN_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.CYAN_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.BLUE_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PURPLE_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.PINK_PRESSURE_PLATE, 1)
+                        .pattern("##")
+                        .input('#', ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.MUSIC_DISC_THE_BYE_JUSTIN_HI_JUSTIN_RAP, 1)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .input('#', Items.DIAMOND)
+                        .input('X', Items.GOLD_INGOT)
+                        .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.MUSIC_DISC_THE_TALE_OF_TOOTHLESS, 1)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .input('#', Items.DIAMOND)
+                        .input('X', Items.EMERALD)
+                        .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.WHITE_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.LIGHT_GRAY_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.GRAY_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.BLACK_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.BROWN_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.RED_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.ORANGE_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.YELLOW_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.LIME_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.GREEN_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.CYAN_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.LIGHT_BLUE_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.BLUE_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.PURPLE_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.MAGENTA_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_PLANKS, 4)
+                        .input(ModBlocks.PLANKS_TEMPLATE)
+                        .input(Items.PINK_DYE)
+                        .criterion(hasItem(ModBlocks.PLANKS_TEMPLATE), conditionsFromItem(ModBlocks.PLANKS_TEMPLATE))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.WHITE_BUTTON, 1)
+                        .input(ModBlocks.WHITE_PLANKS)
+                        .criterion(hasItem(ModBlocks.WHITE_PLANKS), conditionsFromItem(ModBlocks.WHITE_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_BUTTON, 1)
+                        .input(ModBlocks.LIGHT_GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_GRAY_PLANKS), conditionsFromItem(ModBlocks.LIGHT_GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.GRAY_BUTTON, 1)
+                        .input(ModBlocks.GRAY_PLANKS)
+                        .criterion(hasItem(ModBlocks.GRAY_PLANKS), conditionsFromItem(ModBlocks.GRAY_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.BLACK_BUTTON, 1)
+                        .input(ModBlocks.BLACK_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLACK_PLANKS), conditionsFromItem(ModBlocks.BLACK_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.BROWN_BUTTON, 1)
+                        .input(ModBlocks.BROWN_PLANKS)
+                        .criterion(hasItem(ModBlocks.BROWN_PLANKS), conditionsFromItem(ModBlocks.BROWN_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.RED_BUTTON, 1)
+                        .input(ModBlocks.RED_PLANKS)
+                        .criterion(hasItem(ModBlocks.RED_PLANKS), conditionsFromItem(ModBlocks.RED_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.ORANGE_BUTTON, 1)
+                        .input(ModBlocks.ORANGE_PLANKS)
+                        .criterion(hasItem(ModBlocks.ORANGE_PLANKS), conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.YELLOW_BUTTON, 1)
+                        .input(ModBlocks.YELLOW_PLANKS)
+                        .criterion(hasItem(ModBlocks.YELLOW_PLANKS), conditionsFromItem(ModBlocks.YELLOW_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.LIME_BUTTON, 1)
+                        .input(ModBlocks.LIME_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIME_PLANKS), conditionsFromItem(ModBlocks.LIME_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.GREEN_BUTTON, 1)
+                        .input(ModBlocks.GREEN_PLANKS)
+                        .criterion(hasItem(ModBlocks.GREEN_PLANKS), conditionsFromItem(ModBlocks.GREEN_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.CYAN_BUTTON, 1)
+                        .input(ModBlocks.CYAN_PLANKS)
+                        .criterion(hasItem(ModBlocks.CYAN_PLANKS), conditionsFromItem(ModBlocks.CYAN_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.LIGHT_BLUE_BUTTON, 1)
+                        .input(ModBlocks.LIGHT_BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.LIGHT_BLUE_PLANKS), conditionsFromItem(ModBlocks.LIGHT_BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.BLUE_BUTTON, 1)
+                        .input(ModBlocks.BLUE_PLANKS)
+                        .criterion(hasItem(ModBlocks.BLUE_PLANKS), conditionsFromItem(ModBlocks.BLUE_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.PURPLE_BUTTON, 1)
+                        .input(ModBlocks.PURPLE_PLANKS)
+                        .criterion(hasItem(ModBlocks.PURPLE_PLANKS), conditionsFromItem(ModBlocks.PURPLE_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_BUTTON, 1)
+                        .input(ModBlocks.MAGENTA_PLANKS)
+                        .criterion(hasItem(ModBlocks.MAGENTA_PLANKS), conditionsFromItem(ModBlocks.MAGENTA_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.PINK_BUTTON, 1)
+                        .input(ModBlocks.PINK_PLANKS)
+                        .criterion(hasItem(ModBlocks.PINK_PLANKS), conditionsFromItem(ModBlocks.PINK_PLANKS))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.MISC, ModItems.MUSIC_DISC_STEVE_LAVA_CHICKEN, 1)
+                        .input(Items.PLAYER_HEAD)
+                        .criterion(hasItem(Items.PLAYER_HEAD), conditionsFromItem(Items.PLAYER_HEAD))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.MISC, ModItems.MUSIC_DISC_LAVA_TEARSSTEP, 1)
+                        .input(Items.MUSIC_DISC_PIGSTEP)
+                        .input(Items.MUSIC_DISC_TEARS)
+                        .input(Items.MUSIC_DISC_LAVA_CHICKEN)
+                        .criterion(hasItem(Items.MUSIC_DISC_PIGSTEP), conditionsFromItem(Items.MUSIC_DISC_PIGSTEP))
+                        .offerTo(exporter);
+            }
+        };
+    }
+
+    @Override
+    public String getName() {
+        return "TutorialMod Recipes";
+    }
+}
