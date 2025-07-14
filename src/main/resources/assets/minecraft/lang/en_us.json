@@ -1,0 +1,28 @@
+{
+  "biome.minecraft.birch_forest": "Cherry Birch Forest",
+  "biome.minecraft.old_growth_birch_forest": "Old Growth Cherry Birch Forest",
+
+  "block.minecraft.birch_button": "Cherry Birch Button",
+  "block.minecraft.birch_fence": "Cherry Birch Fence",
+  "block.minecraft.birch_fence_gate": "Cherry Birch Fence Gate",
+  "block.minecraft.birch_hanging_sign": "Cherry Birch Hanging Sign",
+  "block.minecraft.birch_leaves": "Cherry Birch Leaves",
+  "block.minecraft.birch_log": "Cherry Birch Log",
+  "block.minecraft.birch_planks": "Cherry Birch Planks",
+  "block.minecraft.birch_pressure_plate": "Cherry Birch Pressure Plate",
+  "block.minecraft.birch_sapling": "Cherry Birch Sapling",
+  "block.minecraft.birch_sign": "Cherry Birch Sign",
+  "block.minecraft.birch_slab": "Cherry Birch Slab",
+  "block.minecraft.birch_stairs": "Cherry Birch Stairs",
+  "block.minecraft.birch_door": "Cherry Birch Door",
+  "block.minecraft.birch_trapdoor": "Cherry Birch Trapdoor",
+  "block.minecraft.birch_wall_hanging_sign": "Cherry Birch Wall Hanging Sign",
+  "block.minecraft.birch_wall_sign": "Cherry Birch Wall Sign",
+  "block.minecraft.birch_wood": "Cherry Birch Wood",
+  "block.minecraft.potted_birch_sapling": "Potted Cherry Birch Sapling",
+  "block.minecraft.stripped_birch_log": "Stripped Cherry Birch Log",
+  "block.minecraft.stripped_birch_wood": "Stripped Cherry Birch Wood",
+
+  "item.minecraft.birch_boat": "Cherry Birch Boat",
+  "item.minecraft.birch_chest_boat": "Cherry Birch Boat with Chest"
+}
