@@ -1,24 +1,24 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:golden_sword",
+      "id": "minecraft:wooden_axe",
       "count": 1
     },
-    "title": "Golden Sword",
-    "description": "Acquire a Golden Sword",
+    "title": "Wooden Axe",
+    "description": "Acquire a Wooden Axe",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "kitty:bedrocksmp/stone_sword",
+  "parent": "kitty:bedrocksmp/root",
   "criteria": {
-    "goldsword": {
+    "axe": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "minecraft:golden_sword"
+            "items": "minecraft:wooden_axe"
           }
         ]
       }
@@ -26,7 +26,7 @@
   },
   "requirements": [
     [
-      "goldsword"
+      "axe"
     ]
   ],
   "sends_telemetry_event": true

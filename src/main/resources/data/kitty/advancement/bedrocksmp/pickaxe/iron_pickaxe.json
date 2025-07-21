@@ -1,24 +1,24 @@
 {
     "display": {
       "icon": {
-        "id": "minecraft:iron_sword",
+        "id": "minecraft:iron_pickaxe",
         "count": 1
       },
-      "title": "Iron Sword",
-      "description": "Acquire an Iron Sword",
+      "title": "Iron Pickaxe",
+      "description": "Acquire an Iron Pickaxe",
       "frame": "goal",
       "show_toast": true,
       "announce_to_chat": true,
       "hidden": false
     },
-    "parent": "kitty:bedrocksmp/golden_sword",
+    "parent": "kitty:bedrocksmp/pickaxe/golden_pickaxe",
     "criteria": {
-      "ironsword": {
+      "pickaxe": {
         "trigger": "minecraft:inventory_changed",
         "conditions": {
           "items": [
             {
-              "items": "minecraft:iron_sword"
+              "items": "minecraft:iron_pickaxe"
             }
           ]
         }
@@ -26,7 +26,7 @@
     },
     "requirements": [
       [
-        "ironsword"
+        "pickaxe"
       ]
     ],
     "sends_telemetry_event": true

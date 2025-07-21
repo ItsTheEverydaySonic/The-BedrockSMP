@@ -920,6 +920,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(Items.MUSIC_DISC_LAVA_CHICKEN)
                         .criterion(hasItem(Items.MUSIC_DISC_PIGSTEP), conditionsFromItem(Items.MUSIC_DISC_PIGSTEP))
                         .offerTo(exporter);
+                createShapeless(RecipeCategory.MISC, ModItems.MUSIC_DISC_TERRIFYING_TEARS, 1)
+                        .input(Items.MUSIC_DISC_11)
+                        .input(Items.MUSIC_DISC_TEARS)
+                        .criterion(hasItem(Items.MUSIC_DISC_11), conditionsFromItem(Items.MUSIC_DISC_TEARS))
+                        .offerTo(exporter);
             }
         };
     }

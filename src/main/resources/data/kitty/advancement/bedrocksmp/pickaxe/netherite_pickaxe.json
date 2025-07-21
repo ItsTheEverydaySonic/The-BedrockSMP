@@ -11,9 +11,9 @@
       "announce_to_chat": true,
       "hidden": false
     },
-    "parent": "kitty:bedrocksmp/diamond_pickaxe",
+    "parent": "kitty:bedrocksmp/pickaxe/diamond_pickaxe",
     "criteria": {
-      "netheritepick": {
+      "pickaxe": {
         "trigger": "minecraft:inventory_changed",
         "conditions": {
           "items": [
@@ -26,7 +26,7 @@
     },
     "requirements": [
       [
-        "netheritepick"
+        "pickaxe"
       ]
     ],
     "sends_telemetry_event": true

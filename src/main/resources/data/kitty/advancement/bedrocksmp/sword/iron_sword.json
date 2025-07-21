@@ -1,24 +1,24 @@
 {
     "display": {
       "icon": {
-        "id": "minecraft:netherite_sword",
+        "id": "minecraft:iron_sword",
         "count": 1
       },
-      "title": "Netherite Sword",
-      "description": "Acquire a Netherite Sword",
-      "frame": "challenge",
+      "title": "Iron Sword",
+      "description": "Acquire an Iron Sword",
+      "frame": "goal",
       "show_toast": true,
       "announce_to_chat": true,
       "hidden": false
     },
-    "parent": "kitty:bedrocksmp/diamond_sword",
+    "parent": "kitty:bedrocksmp/sword/golden_sword",
     "criteria": {
-      "netheritesword": {
+      "sword": {
         "trigger": "minecraft:inventory_changed",
         "conditions": {
           "items": [
             {
-              "items": "minecraft:netherite_sword"
+              "items": "minecraft:iron_sword"
             }
           ]
         }
@@ -26,7 +26,7 @@
     },
     "requirements": [
       [
-        "netheritesword"
+        "sword"
       ]
     ],
     "sends_telemetry_event": true

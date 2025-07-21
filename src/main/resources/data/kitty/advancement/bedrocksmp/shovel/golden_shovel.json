@@ -1,24 +1,24 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:wooden_pickaxe",
+      "id": "minecraft:golden_shovel",
       "count": 1
     },
-    "title": "Wooden Pickaxe",
-    "description": "Acquire a Wooden Pickaxe",
+    "title": "Golden Shovel",
+    "description": "Acquire a Golden Shovel",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "kitty:bedrocksmp/root",
+  "parent": "kitty:bedrocksmp/shovel/stone_shovel",
   "criteria": {
-    "woodenpick": {
+    "shovel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "minecraft:wooden_pickaxe"
+            "items": "minecraft:golden_shovel"
           }
         ]
       }
@@ -26,7 +26,7 @@
   },
   "requirements": [
     [
-      "woodenpick"
+      "shovel"
     ]
   ],
   "sends_telemetry_event": true

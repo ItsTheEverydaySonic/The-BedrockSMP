@@ -1,24 +1,24 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:golden_pickaxe",
+      "id": "minecraft:iron_axe",
       "count": 1
     },
-    "title": "Golden Pickaxe",
-    "description": "Acquire a Golden Pickaxe",
-    "frame": "task",
+    "title": "Iron Axe",
+    "description": "Acquire a Iron Axe",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "kitty:bedrocksmp/stone_pickaxe",
+  "parent": "kitty:bedrocksmp/axe/golden_axe",
   "criteria": {
-    "goldpick": {
+    "axe": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "minecraft:golden_pickaxe"
+            "items": "minecraft:iron_axe"
           }
         ]
       }
@@ -26,7 +26,7 @@
   },
   "requirements": [
     [
-      "goldpick"
+      "axe"
     ]
   ],
   "sends_telemetry_event": true
